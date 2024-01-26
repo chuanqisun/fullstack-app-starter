@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "start": "tsx watch server.ts"
+    "start": "tsx watch server.ts",
+    "dev": "tsx watch server.ts"
   },
   "author": "",
   "license": "ISC",

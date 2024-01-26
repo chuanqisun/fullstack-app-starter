@@ -4,7 +4,6 @@
     "dockerfile": "Dockerfile"
   },
   "remoteUser": "node",
-  "forwardPorts": [9745],
   "customizations": {
     "vscode": {
       "extensions": ["esbenp.prettier-vscode"]
