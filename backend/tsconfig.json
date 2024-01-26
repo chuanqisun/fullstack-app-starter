@@ -17,11 +17,5 @@
     "outDir": "./build"
   },
   "include": ["**/*.ts"],
-  "exclude": ["node_modules"],
-  "ts-node": {
-    "transpileOnly": true,
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  }
+  "exclude": ["node_modules"]
 }
