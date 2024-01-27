@@ -1,8 +1,9 @@
 {
-  "name": "event-streamer-backend",
+  "name": "@interview/backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
+  "types": "types.d.ts",
   "scripts": {
     "start": "tsx watch server.ts",
     "dev": "tsx watch server.ts"
