@@ -18,7 +18,7 @@ export type AppRouter = typeof trpcRouter;
 const server = fastify()
   .register(cors)
   .register(fastifyStatic, {
-    root: path.resolve("dist/static"),
+    root: path.resolve("static"),
   })
   .register(fastifyTRPCPlugin, {
     prefix: "/trpc",

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 9746",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --outDir ../backend/dist/static",
     "test": "vitest",
     "preview": "vite preview"
   },

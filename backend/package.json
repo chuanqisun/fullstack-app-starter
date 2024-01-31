@@ -2,11 +2,13 @@
   "name": "@interview/backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
-  "types": "server.ts",
+  "main": "dist/main.ts",
+  "types": "src/main.ts",
   "scripts": {
-    "start": "tsx watch server.ts",
-    "dev": "tsx watch server.ts"
+    "start": "tsx watch src/main.ts",
+    "dev": "tsx watch src/main.ts",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && esbuild src/main.ts --platform=node --sourcemap --target=node20 --bundle --outdir=dist"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.13",
+    "esbuild": "^0.20.0",
     "tsx": "^4.7.0"
   }
 }
