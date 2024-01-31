@@ -1,5 +1,5 @@
 {
-  "name": "elicit-interview-kit",
+  "name": "fastify-trpc-starter",
   "version": "0.1.0",
   "private": true,
   "scripts": {

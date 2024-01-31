@@ -1,4 +1,4 @@
-import type { AppRouter } from "@interview/backend";
+import type { AppRouter } from "@app/backend";
 import { createTRPCProxyClient, httpLink, type CreateTRPCProxyClient } from "@trpc/client";
 
 export type ApiProxy = CreateTRPCProxyClient<AppRouter>;

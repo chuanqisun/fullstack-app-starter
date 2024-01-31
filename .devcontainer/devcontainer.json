@@ -1,12 +1,12 @@
 {
-  "name": "Elicit Interview Container",
+  "name": "App Container",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
   },
   "remoteUser": "node",
   "customizations": {
     "vscode": {
-      "extensions": ["esbenp.prettier-vscode"]
-    }
-  }
+      "extensions": ["esbenp.prettier-vscode"],
+    },
+  },
 }
