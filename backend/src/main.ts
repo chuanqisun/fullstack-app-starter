@@ -15,10 +15,13 @@ const trpcRouter = trpc.router({
 
 export type AppRouter = typeof trpcRouter;
 
+const staticAssetPath = path.resolve(__dirname, "static");
+console.log("[static assets] root", staticAssetPath);
+
 const server = fastify()
   .register(cors)
   .register(fastifyStatic, {
-    root: path.resolve("static"),
+    root: staticAssetPath,
   })
   .register(fastifyTRPCPlugin, {
     prefix: "/trpc",
