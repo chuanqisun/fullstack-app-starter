@@ -6,11 +6,11 @@ import fastify from "fastify";
 import path from "path";
 import { pong } from "./routes/pong";
 
-export const trpcServer = initTRPC.context().create();
-export type TrpcServer = typeof trpcServer;
+export const trpc = initTRPC.context().create();
+export type TrpcServer = typeof trpc;
 
-const trpcRouter = trpcServer.router({
-  ping: pong(trpcServer),
+const trpcRouter = trpc.router({
+  ping: pong(trpc),
 });
 
 export type AppRouter = typeof trpcRouter;
@@ -32,7 +32,7 @@ const port = parseInt(process.env.PORT ?? "3000");
 (async () => {
   try {
     console.log(`Listening on port ${port}`);
-    await server.listen({ port, host: "0.0.0.0" });
+    await server.listen({ port });
   } catch (err) {
     server.log.error(err);
     process.exit(1);
