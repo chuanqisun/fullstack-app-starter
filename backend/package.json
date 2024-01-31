@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
-  "types": "types.d.ts",
+  "types": "server.ts",
   "scripts": {
     "start": "tsx watch server.ts",
     "dev": "tsx watch server.ts"

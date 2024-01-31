@@ -9,6 +9,12 @@ import { pong } from "./routes/pong";
 export const trpcServer = initTRPC.context().create();
 export type TrpcServer = typeof trpcServer;
 
+const trpcRouter = trpcServer.router({
+  ping: pong(trpcServer),
+});
+
+export type AppRouter = typeof trpcRouter;
+
 const server = fastify()
   .register(cors)
   .register(fastifyStatic, {
@@ -17,9 +23,7 @@ const server = fastify()
   .register(fastifyTRPCPlugin, {
     prefix: "/trpc",
     trpcOptions: {
-      router: trpcServer.router({
-        ping: pong(trpcServer),
-      }),
+      router: trpcRouter,
     },
   });
 
